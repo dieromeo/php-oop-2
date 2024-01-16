@@ -61,6 +61,9 @@ require __DIR__ . "/controllers/ProductController.php";
                                     <li class="list-group-item  text-light bg-dark">
                                         <h5>Prezzo: <?php echo $product->price ?> €</h5>
                                     </li>
+                                    <li class="list-group-item  text-light bg-dark text-center">
+                                        <button class="btn btn-success">Acquista</button>
+                                    </li>
                                 </ul>
 
                             </div>
