@@ -5,9 +5,9 @@ class SpecificProduct extends Product
 {
     public $tipology;
 
-    function __construct($_name, $_price, $_category, $_description, $_tipology)
+    function __construct($_name, $_price, $_category, $_description, $_tipology, $_image)
     {
-        parent::__construct($_name, $_price, $_category, $_description);
+        parent::__construct($_name, $_price, $_category, $_description, $_image);
         $this->setTipology($_tipology);
     }
 

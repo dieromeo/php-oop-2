@@ -6,13 +6,15 @@ class Product
     public $price;
     public $category;
     public $description;
+    public $image;
 
-    function __construct(string $_name, int $_price, string $_category, string $_description)
+    function __construct(string $_name, int $_price, string $_category, string $_description, $_image)
     {
         $this->setName($_name);
         $this->price = $_price;
         $this->setCategory($_category);
         $this->description = $_description;
+        $this->image = $_image;
     }
 
     /**
