@@ -67,6 +67,3 @@ $db_products = [
         ]
     ],
 ];
-
-// header('Content-Type: application/json');
-// echo json_encode($db_products);
