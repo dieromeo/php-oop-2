@@ -1,0 +1,13 @@
+.img-container {
+    height: 500px;
+}
+
+.title-container,
+.description-container {
+    height: 130px;
+    overflow-y: auto;
+}
+
+.category-container img {
+    height: 25px;
+}

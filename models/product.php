@@ -29,6 +29,7 @@ class Product
             $this->name = $name;
         }
     }
+
     /**
      * setCategory Setta la categoria se vengono inseriti i valori aspettati
      *
@@ -40,5 +41,19 @@ class Product
         if (strtolower($category) === "cane" || strtolower($category) === "gatto" || strtolower($category) === "cane e gatto") {
             $this->category = $category;
         }
+    }
+
+    public function getCategoryIcon($category)
+    {
+        $urls = [];
+        if (strtolower($category) === "cane") {
+            array_push($urls,  "./database/images/dog.png");
+        } else if (strtolower($category) === "gatto") {
+            array_push($urls,  "./database/images/cat.png");
+        } else if (strtolower($category) === "cane e gatto") {
+            array_push($urls,  "./database/images/dog.png");
+            array_push($urls,  "./database/images/cat.png");
+        }
+        return $urls;
     }
 }
