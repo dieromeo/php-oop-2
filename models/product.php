@@ -10,9 +10,17 @@ class Product
 
     function __construct(string $_name, int $_price, string $_category, string $_description, $_image)
     {
-        $this->setName($_name);
+        try {
+            $this->setName($_name);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
         $this->price = $_price;
-        $this->setCategory($_category);
+        try {
+            $this->setCategory($_category);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
         $this->description = $_description;
         $this->image = $_image;
     }
@@ -27,7 +35,7 @@ class Product
     {
         if (strlen($name) >= 3) {
             $this->name = $name;
-        }
+        } else throw new Exception('Inserisci un nome di lunghezza valida');
     }
 
     /**
@@ -40,7 +48,7 @@ class Product
     {
         if (strtolower($category) === "cane" || strtolower($category) === "gatto" || strtolower($category) === "cane e gatto") {
             $this->category = $category;
-        }
+        } else throw new Exception('Categoria non presente');
     }
 
     public function getCategoryIcon($category)

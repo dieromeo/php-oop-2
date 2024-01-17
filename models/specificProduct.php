@@ -8,7 +8,11 @@ class SpecificProduct extends Product
     function __construct($_name, $_price, $_category, $_description, $_tipology, $_image)
     {
         parent::__construct($_name, $_price, $_category, $_description, $_image);
-        $this->setTipology($_tipology);
+        try {
+            $this->setTipology($_tipology);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
     }
 
     /**
@@ -23,6 +27,6 @@ class SpecificProduct extends Product
         $tipology_lower = strtolower($tipology);
         if (in_array($tipology_lower, $tipology_value)) {
             $this->tipology = $tipology;
-        }
+        } else throw new Exception('Inserisci un tipologia valida');
     }
 }
