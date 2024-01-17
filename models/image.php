@@ -1,6 +1,8 @@
 <?php
+require_once __DIR__ . "/../traits/nameAndId.php";
 class Image
 {
+    use NameAndId;
     public $url;
     public $alt;
 

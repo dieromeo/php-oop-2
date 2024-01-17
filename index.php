@@ -34,7 +34,7 @@ require __DIR__ . "/controllers/ProductController.php";
                                 <ul class="list-group list-group-flush">
                                     <!-- titolo -->
                                     <li class="list-group-item  text-light bg-dark title-container">
-                                        <h3><?php echo $product->name ?></h3>
+                                        <h3><?php echo $product->getName() ?></h3>
                                     </li>
                                     <!-- tipologia -->
                                     <li class="list-group-item  text-light bg-dark">

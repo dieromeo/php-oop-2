@@ -1,8 +1,10 @@
 <?php
 
+require_once __DIR__ . "/../traits/nameAndId.php";
+
 class Product
 {
-    public $name;
+    use NameAndId;
     public $price;
     public $category;
     public $description;
@@ -23,19 +25,6 @@ class Product
         }
         $this->description = $_description;
         $this->image = $_image;
-    }
-
-    /**
-     * setName Verifica che il nome inserito abbia almeno 3 caratteri
-     *
-     * @param  mixed $name
-     * @return void
-     */
-    public function setName($name)
-    {
-        if (strlen($name) >= 3) {
-            $this->name = $name;
-        } else throw new Exception('Inserisci un nome di lunghezza valida');
     }
 
     /**
